@@ -20,32 +20,32 @@ Name = autorun
 Version = 0.1
 Author = Massi-X (Mod by _Dejan_)
 Date = 2020-11-01
-Shell = /share/CE_CACHEDEV1_DATA/.qpkg/autorun/autorun.sh
-Install_Path = /share/CE_CACHEDEV1_DATA/.qpkg/autorun
+Shell = /share/CACHEDEV1_DATA/.qpkg/autorun/autorun.sh
+Install_Path = /share/CACHEDEV1_DATA/.qpkg/autorun
 QPKG_File = autorun.qpkg
 Enable = FALSE
 ```
 
 3.) Create the folder for the package:
 ```
-mkdir /share/CE_CACHEDEV1_DATA/.qpkg/autorun
+mkdir /share/CACHEDEV1_DATA/.qpkg/autorun
 ```
 
 4.) Create the autorun file:
 ```
-vi /share/CE_CACHEDEV1_DATA/.qpkg/autorun/autorun.sh
+vi /share/CACHEDEV1_DATA/.qpkg/autorun/autorun.sh
 ```
 
 5.) Paste lines from uploaded autorun.sh file to this new file. Replace "VM-TEST-01" with your VM name to show correct name inside logs. In Virtualization Station find UUID inside your VM settings and replace UUID in autorun.sh file(c29a6780-0494-4de3-89ea-8120fc01a22f) with your UUID.
 
 Save file and make it executable:
 ```
-chmod +x /share/CE_CACHEDEV1_DATA/.qpkg/autorun/autorun.sh
+chmod +x /share/CACHEDEV1_DATA/.qpkg/autorun/autorun.sh
 ```
 
 6.) Create the USB info file:
 ```
-vi /share/CE_CACHEDEV1_DATA/.qpkg/autorun/Mount_USB_1.xml
+vi /share/CACHEDEV1_DATA/.qpkg/autorun/Mount_USB_1.xml
 ```
 
 and copy content from uploaded Mount_USB_1.xml. Edit "vendor id" and "product id" to your device id's. You can find your device id's with simple command "lsusb".
@@ -60,7 +60,7 @@ If VM start and output show that device is attached successfully then this is OK
 
 If you need connect more than one device then you need repeat step 6. and create new device XML:
 ```
-vi /share/CE_CACHEDEV1_DATA/.qpkg/autorun/Mount_USB_2.xml
+vi /share/CACHEDEV1_DATA/.qpkg/autorun/Mount_USB_2.xml
 ```
 and inside autorun.sh file add additional line to attach device so after added line it will look:
 ```
